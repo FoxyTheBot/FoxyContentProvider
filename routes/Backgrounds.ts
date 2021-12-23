@@ -5,3 +5,5 @@ const routes = express.Router();
 routes.get(`/backgrounds/${bglist.map(r => r.id === "")}`, (req, res) => {
     // to do
 })
+
+export = routes;
