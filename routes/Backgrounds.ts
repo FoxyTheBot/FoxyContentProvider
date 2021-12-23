@@ -8,7 +8,7 @@ routes.get(`/backgrounds/:id`, (req, res) => {
     if (background) {
        res.sendFile(background.filename, { root: "./public/assets/backgrounds" }); 
     } else {
-        res.status(404);
+        res.sendFile("404.png", { root: "./public/assets/" });
     }
 })
 
