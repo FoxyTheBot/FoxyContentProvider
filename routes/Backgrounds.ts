@@ -2,8 +2,14 @@ import express from 'express';
 import { bglist } from '../data/backgrounds.json';
 const routes = express.Router();
 
-routes.get(`/backgrounds/${bglist.map(r => r.id === "")}`, (req, res) => {
-    // to do
+routes.get(`/backgrounds/:id`, (req, res) => {
+    const id = req.params.id;
+    const background = bglist.find(bg => bg.id === id);
+    if (background) {
+       res.sendFile(background.filename, { root: "./public/assets/backgrounds" }); 
+    } else {
+        res.status(404);
+    }
 })
 
 export = routes;
