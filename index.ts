@@ -1,4 +1,4 @@
-import { app } from './server/app';
+import { app, express } from './server/server';
 const port = 8000;
 
 app.use(express.static("public"));
