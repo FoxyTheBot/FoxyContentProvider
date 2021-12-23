@@ -1,5 +1,5 @@
 import { app } from './server/app';
-const port = 1337;
+const port = 8000;
 
 app.use(express.static("public"));
 app.use("/", require("./routes/Other"));
