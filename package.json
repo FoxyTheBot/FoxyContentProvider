@@ -1,0 +1,14 @@
+{
+  "name": "foxycontentprovider",
+  "version": "1.0.0",
+  "description": "This repository is responsible to send all commands content to Foxy",
+  "main": "build/index.js",
+  "repository": "https://github.com/FoxyTheBot/FoxyContentProvider",
+  "author": "WinG4merBR <wingamerbr@foxybot.win>",
+  "license": "AGPL-3.0",
+  "private": false,
+  "dependencies": {
+    "@types/node": "^18.15.6",
+    "express": "^4.18.2"
+  }
+}
