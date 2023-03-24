@@ -2,7 +2,7 @@ import express from 'express';
 import fs from 'fs';
 const router = express.Router();
 
-router.get("/image/:commandName", (req, res) => {
+router.get("/images/:commandName", (req, res) => {
     const { commandName } = req.params;
 
     try {
