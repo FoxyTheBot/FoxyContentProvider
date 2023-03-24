@@ -8,9 +8,9 @@ router.get("/roleplay/:commandName", (req, res) => {
     try {
         const commandFiles = fs.readdirSync(`./assets/commands/roleplay/${commandName}`);
         const asset = commandFiles[(Math.floor(Math.random() * commandFiles.length))]
-        res.sendFile(`./commands/roleplay/${commandName}/${asset}`, { root: "./assets" });
+        res.send({ url: `https://cdn.foxybot.win/roleplay/${commandName}/${asset}`});
     } catch(e) {
-        res.sendFile("404.png", { root: "./assets/" });
+        res.status(404);
         console.error(e)
     }
 });
